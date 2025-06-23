@@ -1,0 +1,67 @@
+{
+  "IsSynced": false,
+  "SyncMode": 0,
+  "InSyncWithRuntime": false,
+  "ApplicationType": "plc",
+  "Configuration": "appdata",
+  "Solution": "DefaultSolution",
+  "ControllerGuid": "c8b7c6a6-66b3-429e-9f40-b2a3021c8fcb",
+  "LastChange": 638609683175603741,
+  "MachineName": "VS-W11474",
+  "UserName": "cedric.lenoir",
+  "ProjectCompleteFilename": "C:\\Users\\cedric.lenoir\\Documents\\GitLab\\hevs_ctrlx_pack\\PLC\\InProgress\\BasePackCtrlX.project",
+  "CompilerVersion": {
+    "Major": 3,
+    "Minor": 5,
+    "Build": 19,
+    "Revision": 60,
+    "MajorRevision": 0,
+    "MinorRevision": 60
+  },
+  "OwnVersion": {
+    "Major": 1,
+    "Minor": 2,
+    "Build": 0,
+    "Revision": 0,
+    "MajorRevision": 0,
+    "MinorRevision": 0
+  },
+  "ProductAdditionalFolder": "Default",
+  "ProductProfileName": "ctrlX PLC 1.20.7",
+  "ProductId": "ctrlx-works",
+  "ProductVersion": "1.20.11",
+  "ProductVersionText": "WRK-V-0120.11",
+  "SyncModeSave": false,
+  "SyncModeDownload": false,
+  "SyncModeAsk": false,
+  "SyncAfterBootApplication": false,
+  "UserMetaData": {
+    "VS-W11474:cedric.lenoir": {
+      "MachineName": "VS-W11474",
+      "UserName": "cedric.lenoir",
+      "ProjectCompleteFilename": "C:\\Users\\cedric.lenoir\\Documents\\GitLab\\hevs_ctrlx_pack\\PLC\\InProgress\\BasePackCtrlX.project"
+    },
+    "VS-W08517:cedric.lenoir": {
+      "MachineName": "VS-W08517",
+      "UserName": "cedric.lenoir",
+      "ProjectCompleteFilename": "C:\\Users\\cedric.lenoir\\Documents\\Autb\\autB-lab-Pn-Pack\\FirstPnPack.project"
+    },
+    "VS-W08517:romain.ferrari": {
+      "MachineName": "VS-W08517",
+      "UserName": "romain.ferrari",
+      "ProjectCompleteFilename": "Y:\\romain.ferrari\\Travail_ete_2024_Aut_RF\\CtrlX_Programmes\\EnCours_PROJECT__ProfinetReplacementV5\\EnCours_ProfinetReplacementV5.project"
+    },
+    "WE7845:cedric.lenoir": {
+      "MachineName": "WE7845",
+      "UserName": "cedric.lenoir",
+      "ProjectCompleteFilename": "C:\\Users\\cedric.lenoir\\Documents\\AutB\\BasePackCtrlX.project"
+    }
+  },
+  "CompileinfoChecksum": {
+    "b0264aff-d2a0-4da7-bb5e-931fd83bdeca": 1230864
+  },
+  "SyncDescription": false,
+  "DeviceId": "1001 0081",
+  "DeviceVersion": "1.20.70.0",
+  "UseIoHierachy": true
+}

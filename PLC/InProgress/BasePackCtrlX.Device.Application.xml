@@ -1,0 +1,594 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Symbolconfiguration xmlns="http://www.3s-software.com/schemas/Symbolconfiguration.xsd">
+  <Header>
+    <Version>3.5.14.0</Version>
+    <SymbolConfigObject version="4.4.0.0" runtimeid="3.5.19.50" libversion="4.4.0.0" compiler="3.5.19.60" lmm="3.5.19.60" profile="ctrlX PLC 1.20.7+" settings="SupportOPCUA, IncludeExecutables, XmlIncludeComments, XmlIncludeExecutables, LayoutCalculator=CompatibilityClientSideLayoutCalculator" />
+    <ProjectInfo name="BasePackCtrlX" devicename="Device" appname="Application" />
+  </Header>
+  <TypeList>
+    <TypeSimple name="T_BIT_X_0" size="1" swapsize="0" typeclass="Bit" iecname="BIT" bitoffset="0" />
+    <TypeSimple name="T_BIT_X_1" size="1" swapsize="0" typeclass="Bit" iecname="BIT" bitoffset="1" />
+    <TypeSimple name="T_BIT_X_2" size="1" swapsize="0" typeclass="Bit" iecname="BIT" bitoffset="2" />
+    <TypeSimple name="T_BIT_X_3" size="1" swapsize="0" typeclass="Bit" iecname="BIT" bitoffset="3" />
+    <TypeSimple name="T_BIT_X_4" size="1" swapsize="0" typeclass="Bit" iecname="BIT" bitoffset="4" />
+    <TypeSimple name="T_BIT_X_5" size="1" swapsize="0" typeclass="Bit" iecname="BIT" bitoffset="5" />
+    <TypeSimple name="T_BIT_X_6" size="1" swapsize="0" typeclass="Bit" iecname="BIT" bitoffset="6" />
+    <TypeSimple name="T_BIT_X_7" size="1" swapsize="0" typeclass="Bit" iecname="BIT" bitoffset="7" />
+    <TypeSimple name="T_BOOL" size="1" swapsize="0" typeclass="Bool" iecname="BOOL" />
+    <TypeSimple name="T_DATE_AND_TIME" size="4" swapsize="4" typeclass="DateAndTime" iecname="DATE_AND_TIME" />
+    <TypeSimple name="T_DINT" size="4" swapsize="4" typeclass="DInt" iecname="DINT" />
+    <TypeSimple name="T_DWORD" size="4" swapsize="4" typeclass="DWord" iecname="DWORD" />
+    <TypeSimple name="T_INT" size="2" swapsize="2" typeclass="Int" iecname="INT" />
+    <TypeSimple name="T_LREAL" size="8" swapsize="8" typeclass="LReal" iecname="LREAL" />
+    <TypeSimple name="T_REAL" size="4" swapsize="4" typeclass="Real" iecname="REAL" />
+    <TypeSimple name="T_STRING" size="81" swapsize="0" typeclass="String" iecname="STRING" />
+    <TypeSimple name="T_STRING_6_" size="7" swapsize="0" typeclass="String" iecname="STRING(6)" />
+    <TypeSimple name="T_TIME" size="4" swapsize="4" typeclass="Time" iecname="TIME" />
+    <TypeSimple name="T_UDINT" size="4" swapsize="4" typeclass="UDInt" iecname="UDINT" />
+    <TypeSimple name="T_ULINT" size="8" swapsize="8" typeclass="ULInt" iecname="ULINT" />
+    <TypeArray name="T_ARRAY__0__17__OF_DINT" size="72" nativesize="72" typeclass="Array" iecname="ARRAY [0..17] OF DINT" basetype="T_DINT">
+      <ArrayDim minrange="0" maxrange="17" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__0__8__OF_DWORD" size="36" nativesize="36" typeclass="Array" iecname="ARRAY [0..8] OF DWORD" basetype="T_DWORD">
+      <ArrayDim minrange="0" maxrange="8" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__0__8__OF_STRING" size="729" nativesize="729" typeclass="Array" iecname="ARRAY [0..8] OF STRING" basetype="T_STRING">
+      <ArrayDim minrange="0" maxrange="8" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__1__8__OF_DWORD" size="32" nativesize="32" typeclass="Array" iecname="ARRAY [1..8] OF DWORD" basetype="T_DWORD">
+      <ArrayDim minrange="1" maxrange="8" />
+    </TypeArray>
+    <TypeUserDef name="T_E_PackCmd" size="4" nativesize="4" swapsize="4" typeclass="Enum" iecname="E_PackCmd" basetype="T_DINT">
+      <UserDefElement type="T_E_PackCmd" iecname="eUndefined" enumvalue="0" />
+      <UserDefElement type="T_E_PackCmd" iecname="eReset" enumvalue="1" />
+      <UserDefElement type="T_E_PackCmd" iecname="eStart" enumvalue="2" />
+      <UserDefElement type="T_E_PackCmd" iecname="eStop" enumvalue="3" />
+      <UserDefElement type="T_E_PackCmd" iecname="eHold" enumvalue="4" />
+      <UserDefElement type="T_E_PackCmd" iecname="eUnhold" enumvalue="5" />
+      <UserDefElement type="T_E_PackCmd" iecname="eSuspend" enumvalue="6" />
+      <UserDefElement type="T_E_PackCmd" iecname="eUnsuspend" enumvalue="7" />
+      <UserDefElement type="T_E_PackCmd" iecname="eAbort" enumvalue="8" />
+      <UserDefElement type="T_E_PackCmd" iecname="eClear" enumvalue="9" />
+      <UserDefElement type="T_E_PackCmd" iecname="eComplete" enumvalue="10" />
+    </TypeUserDef>
+    <TypeUserDef name="T_E_PackModes" size="4" nativesize="4" swapsize="4" typeclass="Enum" iecname="E_PackModes" basetype="T_DINT">
+      <UserDefElement type="T_E_PackModes" iecname="Invalid" enumvalue="0" />
+      <UserDefElement type="T_E_PackModes" iecname="Production" enumvalue="1" />
+      <UserDefElement type="T_E_PackModes" iecname="Maintenance" enumvalue="2" />
+      <UserDefElement type="T_E_PackModes" iecname="Manual" enumvalue="3" />
+      <UserDefElement type="T_E_PackModes" iecname="Test" enumvalue="4" />
+      <UserDefElement type="T_E_PackModes" iecname="User_05" enumvalue="5" />
+      <UserDefElement type="T_E_PackModes" iecname="User_06" enumvalue="6" />
+      <UserDefElement type="T_E_PackModes" iecname="User_07" enumvalue="7" />
+      <UserDefElement type="T_E_PackModes" iecname="User_08" enumvalue="8" />
+    </TypeUserDef>
+    <TypeUserDef name="T_E_PackState" size="4" nativesize="4" swapsize="4" typeclass="Enum" iecname="E_PackState" basetype="T_DINT">
+      <UserDefElement type="T_E_PackState" iecname="eUndefined" enumvalue="0" />
+      <UserDefElement type="T_E_PackState" iecname="eClearing" enumvalue="1" />
+      <UserDefElement type="T_E_PackState" iecname="eStopped" enumvalue="2" />
+      <UserDefElement type="T_E_PackState" iecname="eStarting" enumvalue="3" />
+      <UserDefElement type="T_E_PackState" iecname="eIdle" enumvalue="4" />
+      <UserDefElement type="T_E_PackState" iecname="eSuspended" enumvalue="5" />
+      <UserDefElement type="T_E_PackState" iecname="eExecute" enumvalue="6" />
+      <UserDefElement type="T_E_PackState" iecname="eStopping" enumvalue="7" />
+      <UserDefElement type="T_E_PackState" iecname="eAborting" enumvalue="8" />
+      <UserDefElement type="T_E_PackState" iecname="eAborted" enumvalue="9" />
+      <UserDefElement type="T_E_PackState" iecname="eHolding" enumvalue="10" />
+      <UserDefElement type="T_E_PackState" iecname="eHeld" enumvalue="11" />
+      <UserDefElement type="T_E_PackState" iecname="eUnholding" enumvalue="12" />
+      <UserDefElement type="T_E_PackState" iecname="eSuspending" enumvalue="13" />
+      <UserDefElement type="T_E_PackState" iecname="eUnsuspending" enumvalue="14" />
+      <UserDefElement type="T_E_PackState" iecname="eResetting" enumvalue="15" />
+      <UserDefElement type="T_E_PackState" iecname="eCompleting" enumvalue="16" />
+      <UserDefElement type="T_E_PackState" iecname="eCompleted" enumvalue="17" />
+    </TypeUserDef>
+    <TypeUserDef name="T_HEVS_PackAlarm_UI" size="255" nativesize="255" typeclass="Userdef" pouclass="STRUCTURE" iecname="HEVS_PackAlarm_UI">
+      <UserDefElement iecname="uiSetAlarm_0" type="T_BOOL" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiSetAlarm_1" type="T_BOOL" byteoffset="1" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiSetAlarm_2" type="T_BOOL" byteoffset="2" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiAckAlarm_0" type="T_BOOL" byteoffset="3" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiAckAlarm_1" type="T_BOOL" byteoffset="4" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiAckAlarm_2" type="T_BOOL" byteoffset="5" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiSetWarning_0" type="T_BOOL" byteoffset="6" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiSetWarning_1" type="T_BOOL" byteoffset="7" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiSetWarning_2" type="T_BOOL" byteoffset="8" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiAckWarning_0" type="T_BOOL" byteoffset="9" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiAckWarning_1" type="T_BOOL" byteoffset="10" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiAckWarning_2" type="T_BOOL" byteoffset="11" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiTextAlarmOne" type="T_STRING" byteoffset="12" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiTextWarningOne" type="T_STRING" byteoffset="93" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiTextStopReason" type="T_STRING" byteoffset="174" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeUserDef name="T_HEVS_PackTag_Equipment_Interlock" size="2" nativesize="2" typeclass="Userdef" pouclass="STRUCTURE" iecname="HEVS_PackTag_Equipment_Interlock">
+      <UserDefElement iecname="Blocked" type="T_BOOL" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Starved" type="T_BOOL" byteoffset="1" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeUserDef name="T_HEVS_PackTag_Event" size="108" nativesize="108" typeclass="Userdef" pouclass="STRUCTURE" iecname="HEVS_PackTag_Event">
+      <UserDefElement iecname="Trigger" type="T_BOOL" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="ID" type="T_DINT" byteoffset="4" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Value" type="T_DINT" byteoffset="8" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Message" type="T_STRING" byteoffset="12" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Category" type="T_DINT" byteoffset="96" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="DateTime" type="T_DATE_AND_TIME" byteoffset="100" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="AckDateTime" type="T_DATE_AND_TIME" byteoffset="104" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeUserDef name="T_HEVS_PackTag_Parameter_Dint" size="96" nativesize="96" typeclass="Userdef" pouclass="STRUCTURE" iecname="HEVS_PackTag_Parameter_Dint">
+      <UserDefElement iecname="ID" type="T_DINT" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Name" type="T_STRING" byteoffset="4" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Unit" type="T_STRING_6_" byteoffset="85" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Value" type="T_DINT" byteoffset="92" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeUserDef name="T_HEVS_PackTag_Parameter_Lreal" size="104" nativesize="104" typeclass="Userdef" pouclass="STRUCTURE" iecname="HEVS_PackTag_Parameter_Lreal">
+      <UserDefElement iecname="ID" type="T_DINT" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Name" type="T_STRING" byteoffset="4" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Unit" type="T_STRING_6_" byteoffset="85" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Value" type="T_LREAL" byteoffset="96" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeUserDef name="T_HEVS_PackTag_Parameter_Real" size="96" nativesize="96" typeclass="Userdef" pouclass="STRUCTURE" iecname="HEVS_PackTag_Parameter_Real">
+      <UserDefElement iecname="ID" type="T_DINT" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Name" type="T_STRING" byteoffset="4" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Unit" type="T_STRING_6_" byteoffset="85" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Value" type="T_DINT" byteoffset="92" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeUserDef name="T_HEVS_PackTag_Parameter_String" size="176" nativesize="176" typeclass="Userdef" pouclass="STRUCTURE" iecname="HEVS_PackTag_Parameter_String">
+      <UserDefElement iecname="ID" type="T_DINT" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Name" type="T_STRING" byteoffset="4" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Unit" type="T_STRING_6_" byteoffset="85" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Value" type="T_STRING" byteoffset="92" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeUserDef name="T_HEVS_PackTag_ProductData" size="120" nativesize="120" typeclass="Userdef" pouclass="STRUCTURE" iecname="HEVS_PackTag_ProductData">
+      <UserDefElement iecname="ID" type="T_DINT" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Name" type="T_STRING" byteoffset="4" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Unit" type="T_STRING_6_" byteoffset="85" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="PrimaryQty" type="T_REAL" byteoffset="92" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="ConsumedCount" type="T_DINT" byteoffset="96" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="ProcessedCount" type="T_DINT" byteoffset="100" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="DefectiveCount" type="T_DINT" byteoffset="104" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="AccConsumedCount" type="T_DINT" byteoffset="108" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="AccProcessedCount" type="T_DINT" byteoffset="112" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="AccDefectiveCount" type="T_DINT" byteoffset="116" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeUserDef name="T_HEVS_PackTag_UI" size="359" nativesize="359" typeclass="Userdef" pouclass="STRUCTURE" iecname="HEVS_PackTag_UI">
+      <UserDefElement iecname="uiCmdReset" type="T_BOOL" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiCmdStart" type="T_BOOL" byteoffset="1" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiCmdStop" type="T_BOOL" byteoffset="2" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiCmdHold" type="T_BOOL" byteoffset="3" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiCmdUnhold" type="T_BOOL" byteoffset="4" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiCmdSuspend" type="T_BOOL" byteoffset="5" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiCmdUnsuspend" type="T_BOOL" byteoffset="6" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiCmdAbort" type="T_BOOL" byteoffset="7" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiCmdClear" type="T_BOOL" byteoffset="8" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiCmdComplete" type="T_BOOL" byteoffset="9" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiStateClearing" type="T_BOOL" byteoffset="10" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiStateStopped" type="T_BOOL" byteoffset="11" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiStateStarting" type="T_BOOL" byteoffset="12" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiStateIdle" type="T_BOOL" byteoffset="13" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiStateSuspended" type="T_BOOL" byteoffset="14" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiStateExecute" type="T_BOOL" byteoffset="15" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiStateStopping" type="T_BOOL" byteoffset="16" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiStateAborting" type="T_BOOL" byteoffset="17" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiStateAborted" type="T_BOOL" byteoffset="18" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiStateHolding" type="T_BOOL" byteoffset="19" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiStateHeld" type="T_BOOL" byteoffset="20" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiStateUnholding" type="T_BOOL" byteoffset="21" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiStateSuspending" type="T_BOOL" byteoffset="22" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiStateUnsuspending" type="T_BOOL" byteoffset="23" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiStateResetting" type="T_BOOL" byteoffset="24" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiStateCompleting" type="T_BOOL" byteoffset="25" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiStateCompleted" type="T_BOOL" byteoffset="26" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiModeProduction" type="T_BOOL" byteoffset="27" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiModeMaintenance" type="T_BOOL" byteoffset="28" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiModeManual" type="T_BOOL" byteoffset="29" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiModeTest" type="T_BOOL" byteoffset="30" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiModeUser_05" type="T_BOOL" byteoffset="31" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiModeUser_06" type="T_BOOL" byteoffset="32" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiModeUser_07" type="T_BOOL" byteoffset="33" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiModeUser_08" type="T_BOOL" byteoffset="34" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiStateMasterCurrent" type="T_STRING" byteoffset="35" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiStateMasterDiagnostic" type="T_STRING" byteoffset="116" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiModeMasterCurrent" type="T_STRING" byteoffset="197" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uiModeMasterDiagnostic" type="T_STRING" byteoffset="278" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeUserDef name="T_HEVS_Time" size="96" nativesize="96" typeclass="Userdef" pouclass="STRUCTURE" iecname="HEVS_Time">
+      <UserDefElement iecname="Date_and_time_in_seconds" type="T_UDINT" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Local_date_time_seconds" type="T_UDINT" byteoffset="4" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Date_and_time_format" type="T_DATE_AND_TIME" byteoffset="8" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Date_and_time_string" type="T_STRING" byteoffset="12" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeSimple name="T_REFERENCE_TO_DINT_REF" size="4" swapsize="4" typeclass="Reference" iecname="REFERENCE TO DINT_REF" basetype="T_DINT" />
+    <TypeUserDef name="T_R_TRIG" size="16" nativesize="16" typeclass="Userdef" pouclass="FUNCTION_BLOCK" iecname="R_TRIG">
+      <UserDefElement iecname="CLK" type="T_BOOL" byteoffset="8" vartype="VAR_INPUT" access="ReadWrite" />
+      <UserDefElement iecname="Q" type="T_BOOL" byteoffset="9" vartype="VAR_OUTPUT" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeUserDef name="T_ST_PackMode" size="32" nativesize="4" typeclass="Userdef" pouclass="STRUCTURE" iecname="ST_PackMode">
+      <UserDefElement iecname="Invalid" type="T_BIT_X_0" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Production" type="T_BIT_X_1" byteoffset="1" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Maintenance" type="T_BIT_X_2" byteoffset="2" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Manual" type="T_BIT_X_3" byteoffset="3" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Test" type="T_BIT_X_4" byteoffset="4" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="UserDefinable_5" type="T_BIT_X_5" byteoffset="5" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="UserDefinable_6" type="T_BIT_X_6" byteoffset="6" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="UserDefinable_7" type="T_BIT_X_7" byteoffset="7" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="UserDefinable_8" type="T_BIT_X_0" byteoffset="8" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="UserDefinable_9" type="T_BIT_X_1" byteoffset="9" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="UserDefinable_10" type="T_BIT_X_2" byteoffset="10" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="UserDefinable_11" type="T_BIT_X_3" byteoffset="11" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="UserDefinable_12" type="T_BIT_X_4" byteoffset="12" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="UserDefinable_13" type="T_BIT_X_5" byteoffset="13" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="UserDefinable_14" type="T_BIT_X_6" byteoffset="14" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="UserDefinable_15" type="T_BIT_X_7" byteoffset="15" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="UserDefinable_16" type="T_BIT_X_0" byteoffset="16" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="UserDefinable_17" type="T_BIT_X_1" byteoffset="17" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="UserDefinable_18" type="T_BIT_X_2" byteoffset="18" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="UserDefinable_19" type="T_BIT_X_3" byteoffset="19" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="UserDefinable_20" type="T_BIT_X_4" byteoffset="20" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="UserDefinable_21" type="T_BIT_X_5" byteoffset="21" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="UserDefinable_22" type="T_BIT_X_6" byteoffset="22" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="UserDefinable_23" type="T_BIT_X_7" byteoffset="23" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="UserDefinable_24" type="T_BIT_X_0" byteoffset="24" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="UserDefinable_25" type="T_BIT_X_1" byteoffset="25" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="UserDefinable_26" type="T_BIT_X_2" byteoffset="26" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="UserDefinable_27" type="T_BIT_X_3" byteoffset="27" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="UserDefinable_28" type="T_BIT_X_4" byteoffset="28" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="UserDefinable_29" type="T_BIT_X_5" byteoffset="29" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="UserDefinable_30" type="T_BIT_X_6" byteoffset="30" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="UserDefinable_31" type="T_BIT_X_7" byteoffset="31" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeUserDef name="T_ST_PackState" size="18" nativesize="3" typeclass="Userdef" pouclass="STRUCTURE" iecname="ST_PackState">
+      <UserDefElement iecname="Undefined" type="T_BIT_X_0" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Clearing" type="T_BIT_X_1" byteoffset="1" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Stopped" type="T_BIT_X_2" byteoffset="2" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Starting" type="T_BIT_X_3" byteoffset="3" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Idle" type="T_BIT_X_4" byteoffset="4" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Suspended" type="T_BIT_X_5" byteoffset="5" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Execute" type="T_BIT_X_6" byteoffset="6" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Stopping" type="T_BIT_X_7" byteoffset="7" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Aborting" type="T_BIT_X_0" byteoffset="8" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Aborted" type="T_BIT_X_1" byteoffset="9" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Holding" type="T_BIT_X_2" byteoffset="10" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Held" type="T_BIT_X_3" byteoffset="11" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Unholding" type="T_BIT_X_4" byteoffset="12" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Suspending" type="T_BIT_X_5" byteoffset="13" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Unsuspending" type="T_BIT_X_6" byteoffset="14" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Resetting" type="T_BIT_X_7" byteoffset="15" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Completing" type="T_BIT_X_0" byteoffset="16" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Completed" type="T_BIT_X_1" byteoffset="17" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeUserDef name="T_TON" size="32" nativesize="32" typeclass="Userdef" pouclass="FUNCTION_BLOCK" iecname="TON">
+      <UserDefElement iecname="IN" type="T_BOOL" byteoffset="8" vartype="VAR_INPUT" access="ReadWrite" />
+      <UserDefElement iecname="PT" type="T_TIME" byteoffset="12" vartype="VAR_INPUT" access="ReadWrite" />
+      <UserDefElement iecname="Q" type="T_BOOL" byteoffset="16" vartype="VAR_OUTPUT" access="ReadWrite" />
+      <UserDefElement iecname="ET" type="T_TIME" byteoffset="20" vartype="VAR_OUTPUT" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeArray name="T_ARRAY__0__11__OF_HEVS_PackTag_ProductData" size="1440" nativesize="1440" typeclass="Array" iecname="ARRAY [0..11] OF HEVS_PackTag_ProductData" basetype="T_HEVS_PackTag_ProductData">
+      <ArrayDim minrange="0" maxrange="11" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__0__20__OF_HEVS_PackTag_Event" size="2268" nativesize="2268" typeclass="Array" iecname="ARRAY [0..20] OF HEVS_PackTag_Event" basetype="T_HEVS_PackTag_Event">
+      <ArrayDim minrange="0" maxrange="20" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__0__2__OF_HEVS_PackTag_Parameter_String" size="528" nativesize="528" typeclass="Array" iecname="ARRAY [0..2] OF HEVS_PackTag_Parameter_String" basetype="T_HEVS_PackTag_Parameter_String">
+      <ArrayDim minrange="0" maxrange="2" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__0__8__OF_HEVS_PackTag_Parameter_Dint" size="864" nativesize="864" typeclass="Array" iecname="ARRAY [0..8] OF HEVS_PackTag_Parameter_Dint" basetype="T_HEVS_PackTag_Parameter_Dint">
+      <ArrayDim minrange="0" maxrange="8" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__0__8__OF_HEVS_PackTag_Parameter_Lreal" size="936" nativesize="936" typeclass="Array" iecname="ARRAY [0..8] OF HEVS_PackTag_Parameter_Lreal" basetype="T_HEVS_PackTag_Parameter_Lreal">
+      <ArrayDim minrange="0" maxrange="8" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__0__8__OF_HEVS_PackTag_Parameter_Real" size="864" nativesize="864" typeclass="Array" iecname="ARRAY [0..8] OF HEVS_PackTag_Parameter_Real" basetype="T_HEVS_PackTag_Parameter_Real">
+      <ArrayDim minrange="0" maxrange="8" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__1__2__OF_HEVS_PackTag_Parameter_Real" size="192" nativesize="192" typeclass="Array" iecname="ARRAY [1..2] OF HEVS_PackTag_Parameter_Real" basetype="T_HEVS_PackTag_Parameter_Real">
+      <ArrayDim minrange="1" maxrange="2" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__1__2__OF_HEVS_PackTag_Parameter_String" size="352" nativesize="352" typeclass="Array" iecname="ARRAY [1..2] OF HEVS_PackTag_Parameter_String" basetype="T_HEVS_PackTag_Parameter_String">
+      <ArrayDim minrange="1" maxrange="2" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__1__8__OF_HEVS_PackTag_Parameter_Dint" size="768" nativesize="768" typeclass="Array" iecname="ARRAY [1..8] OF HEVS_PackTag_Parameter_Dint" basetype="T_HEVS_PackTag_Parameter_Dint">
+      <ArrayDim minrange="1" maxrange="8" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__1__8__OF_HEVS_PackTag_Parameter_Lreal" size="832" nativesize="832" typeclass="Array" iecname="ARRAY [1..8] OF HEVS_PackTag_Parameter_Lreal" basetype="T_HEVS_PackTag_Parameter_Lreal">
+      <ArrayDim minrange="1" maxrange="8" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__1__8__OF_HEVS_PackTag_Parameter_Real" size="768" nativesize="768" typeclass="Array" iecname="ARRAY [1..8] OF HEVS_PackTag_Parameter_Real" basetype="T_HEVS_PackTag_Parameter_Real">
+      <ArrayDim minrange="1" maxrange="8" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__1__8__OF_HEVS_PackTag_Parameter_String" size="1408" nativesize="1408" typeclass="Array" iecname="ARRAY [1..8] OF HEVS_PackTag_Parameter_String" basetype="T_HEVS_PackTag_Parameter_String">
+      <ArrayDim minrange="1" maxrange="8" />
+    </TypeArray>
+    <TypeUserDef name="T_FB_GetActualBoolState" size="40" nativesize="40" typeclass="Userdef" pouclass="FUNCTION_BLOCK" iecname="FB_GetActualBoolState">
+      <UserDefElement iecname="Enable" type="T_BOOL" byteoffset="8" vartype="VAR_INPUT" access="ReadWrite" />
+      <UserDefElement iecname="ePackState" type="T_E_PackState" byteoffset="12" vartype="VAR_INPUT" access="ReadWrite" />
+      <UserDefElement iecname="Active" type="T_BOOL" byteoffset="16" vartype="VAR_OUTPUT" access="ReadWrite" />
+      <UserDefElement iecname="Clearing" type="T_BOOL" byteoffset="17" vartype="VAR_OUTPUT" access="ReadWrite" />
+      <UserDefElement iecname="Stopped" type="T_BOOL" byteoffset="18" vartype="VAR_OUTPUT" access="ReadWrite" />
+      <UserDefElement iecname="Starting" type="T_BOOL" byteoffset="19" vartype="VAR_OUTPUT" access="ReadWrite" />
+      <UserDefElement iecname="Idle" type="T_BOOL" byteoffset="20" vartype="VAR_OUTPUT" access="ReadWrite" />
+      <UserDefElement iecname="Suspended" type="T_BOOL" byteoffset="21" vartype="VAR_OUTPUT" access="ReadWrite" />
+      <UserDefElement iecname="Execute" type="T_BOOL" byteoffset="22" vartype="VAR_OUTPUT" access="ReadWrite" />
+      <UserDefElement iecname="Stopping" type="T_BOOL" byteoffset="23" vartype="VAR_OUTPUT" access="ReadWrite" />
+      <UserDefElement iecname="Aborting" type="T_BOOL" byteoffset="24" vartype="VAR_OUTPUT" access="ReadWrite" />
+      <UserDefElement iecname="Aborted" type="T_BOOL" byteoffset="25" vartype="VAR_OUTPUT" access="ReadWrite" />
+      <UserDefElement iecname="Holding" type="T_BOOL" byteoffset="26" vartype="VAR_OUTPUT" access="ReadWrite" />
+      <UserDefElement iecname="Held" type="T_BOOL" byteoffset="27" vartype="VAR_OUTPUT" access="ReadWrite" />
+      <UserDefElement iecname="Unholding" type="T_BOOL" byteoffset="28" vartype="VAR_OUTPUT" access="ReadWrite" />
+      <UserDefElement iecname="Suspending" type="T_BOOL" byteoffset="29" vartype="VAR_OUTPUT" access="ReadWrite" />
+      <UserDefElement iecname="Unsuspending" type="T_BOOL" byteoffset="30" vartype="VAR_OUTPUT" access="ReadWrite" />
+      <UserDefElement iecname="Resetting" type="T_BOOL" byteoffset="31" vartype="VAR_OUTPUT" access="ReadWrite" />
+      <UserDefElement iecname="Completing" type="T_BOOL" byteoffset="32" vartype="VAR_OUTPUT" access="ReadWrite" />
+      <UserDefElement iecname="Completed" type="T_BOOL" byteoffset="33" vartype="VAR_OUTPUT" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeUserDef name="T_FB_ModuleTest" size="72" nativesize="72" typeclass="Userdef" pouclass="FUNCTION_BLOCK" iecname="FB_ModuleTest">
+      <UserDefElement iecname="Status_StateCurrent" type="T_DINT" byteoffset="8" vartype="VAR_IN_OUT" access="ReadWrite" />
+      <UserDefElement iecname="stateLastCycie" type="T_E_PackState" byteoffset="16" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="actualState" type="T_E_PackState" byteoffset="20" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="init" type="T_BOOL" byteoffset="24" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="testSC" type="T_TON" byteoffset="32" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="setSC" type="T_BOOL" byteoffset="64" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="SC" type="T_BOOL" byteoffset="65" vartype="VAR" propertytype="variable" access="Read" />
+    </TypeUserDef>
+    <TypeUserDef name="T_FB_PackModeBoolInterface" size="88" nativesize="88" typeclass="Userdef" pouclass="FUNCTION_BLOCK" iecname="FB_PackModeBoolInterface">
+      <UserDefElement iecname="Production" type="T_BOOL" byteoffset="8" vartype="VAR_INPUT" access="ReadWrite" />
+      <UserDefElement iecname="Maintenance" type="T_BOOL" byteoffset="9" vartype="VAR_INPUT" access="ReadWrite" />
+      <UserDefElement iecname="Manual" type="T_BOOL" byteoffset="10" vartype="VAR_INPUT" access="ReadWrite" />
+      <UserDefElement iecname="Test" type="T_BOOL" byteoffset="11" vartype="VAR_INPUT" access="ReadWrite" />
+      <UserDefElement iecname="User_05" type="T_BOOL" byteoffset="12" vartype="VAR_INPUT" access="ReadWrite" />
+      <UserDefElement iecname="User_06" type="T_BOOL" byteoffset="13" vartype="VAR_INPUT" access="ReadWrite" />
+      <UserDefElement iecname="User_07" type="T_BOOL" byteoffset="14" vartype="VAR_INPUT" access="ReadWrite" />
+      <UserDefElement iecname="User_08" type="T_BOOL" byteoffset="15" vartype="VAR_INPUT" access="ReadWrite" />
+      <UserDefElement iecname="eActualPackMode" type="T_E_PackModes" byteoffset="16" vartype="VAR_INPUT" access="ReadWrite" />
+      <UserDefElement iecname="remoteEnable" type="T_BOOL" byteoffset="20" vartype="VAR_INPUT" access="ReadWrite" />
+      <UserDefElement iecname="remoteMode" type="T_E_PackModes" byteoffset="24" vartype="VAR_INPUT" access="ReadWrite" />
+      <UserDefElement iecname="eCmdUnitMode" type="T_E_PackModes" byteoffset="28" vartype="VAR_OUTPUT" access="ReadWrite" />
+      <UserDefElement iecname="bCmdUnitModeChangeRequest" type="T_BOOL" byteoffset="32" vartype="VAR_OUTPUT" access="ReadWrite" />
+      <UserDefElement iecname="waitCycle" type="T_UDINT" byteoffset="36" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uliTrigCounter" type="T_ULINT" byteoffset="40" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="timeToResetCommand_ms" type="T_INT" byteoffset="48" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="timerToResetCommand" type="T_TON" byteoffset="56" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeUserDef name="T_FB_PackStateCmdBoolInterface" size="64" nativesize="64" typeclass="Userdef" pouclass="FUNCTION_BLOCK" iecname="FB_PackStateCmdBoolInterface">
+      <UserDefElement iecname="Reset" type="T_BOOL" byteoffset="8" vartype="VAR_INPUT" access="ReadWrite" />
+      <UserDefElement iecname="Start" type="T_BOOL" byteoffset="9" vartype="VAR_INPUT" access="ReadWrite" />
+      <UserDefElement iecname="Stop" type="T_BOOL" byteoffset="10" vartype="VAR_INPUT" access="ReadWrite" />
+      <UserDefElement iecname="Hold" type="T_BOOL" byteoffset="11" vartype="VAR_INPUT" access="ReadWrite" />
+      <UserDefElement iecname="Unhold" type="T_BOOL" byteoffset="12" vartype="VAR_INPUT" access="ReadWrite" />
+      <UserDefElement iecname="Suspend" type="T_BOOL" byteoffset="13" vartype="VAR_INPUT" access="ReadWrite" />
+      <UserDefElement iecname="Unsuspend" type="T_BOOL" byteoffset="14" vartype="VAR_INPUT" access="ReadWrite" />
+      <UserDefElement iecname="Abort" type="T_BOOL" byteoffset="15" vartype="VAR_INPUT" access="ReadWrite" />
+      <UserDefElement iecname="Clear" type="T_BOOL" byteoffset="16" vartype="VAR_INPUT" access="ReadWrite" />
+      <UserDefElement iecname="Complete" type="T_BOOL" byteoffset="17" vartype="VAR_INPUT" access="ReadWrite" />
+      <UserDefElement iecname="remoteEnable" type="T_BOOL" byteoffset="18" vartype="VAR_INPUT" access="ReadWrite" />
+      <UserDefElement iecname="remoteCmd" type="T_E_PackCmd" byteoffset="20" vartype="VAR_INPUT" access="ReadWrite" />
+      <UserDefElement iecname="eCntrlCmd" type="T_E_PackCmd" byteoffset="24" vartype="VAR_OUTPUT" access="ReadWrite" />
+      <UserDefElement iecname="bCmdChangeRequest" type="T_BOOL" byteoffset="28" vartype="VAR_OUTPUT" access="ReadWrite" />
+      <UserDefElement iecname="rTrigChangeRequest" type="T_R_TRIG" byteoffset="32" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="eCntrlCmdMem" type="T_E_PackCmd" byteoffset="48" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uliTrigCounter" type="T_ULINT" byteoffset="56" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeUserDef name="T_HEVS_PackTag_ModeStateTimes" size="76" nativesize="76" typeclass="Userdef" pouclass="STRUCTURE" iecname="HEVS_PackTag_ModeStateTimes">
+      <UserDefElement iecname="Mode" type="T_DINT" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="State" type="T_ARRAY__0__17__OF_DINT" byteoffset="4" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeUserDef name="T_U_ModeBitDword" size="0" nativesize="4" typeclass="Userdef" pouclass="UNION" iecname="U_ModeBitDword">
+      <UserDefElement iecname="dwMode" type="T_DWORD" byteoffset="-1" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="boolMode" type="T_ST_PackMode" byteoffset="-1" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeUserDef name="T_U_StateBitDword" size="0" nativesize="4" typeclass="Userdef" pouclass="UNION" iecname="U_StateBitDword">
+      <UserDefElement iecname="dwState" type="T_DWORD" byteoffset="-1" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="boolState" type="T_ST_PackState" byteoffset="-1" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeArray name="T_ARRAY__0__8__OF_HEVS_PackTag_ModeStateTimes" size="684" nativesize="684" typeclass="Array" iecname="ARRAY [0..8] OF HEVS_PackTag_ModeStateTimes" basetype="T_HEVS_PackTag_ModeStateTimes">
+      <ArrayDim minrange="0" maxrange="8" />
+    </TypeArray>
+    <TypeUserDef name="T_FB_PackMasterState" size="256" nativesize="256" typeclass="Userdef" pouclass="FUNCTION_BLOCK" iecname="FB_PackMasterState">
+      <UserDefElement iecname="Enable" type="T_BOOL" byteoffset="8" vartype="VAR_INPUT" access="ReadWrite" />
+      <UserDefElement iecname="SC_StateComplete" type="T_BOOL" byteoffset="9" vartype="VAR_INPUT" access="ReadWrite" />
+      <UserDefElement iecname="Command_CntrlCmd" type="T_E_PackCmd" byteoffset="12" vartype="VAR_INPUT" access="ReadWrite" />
+      <UserDefElement iecname="Command_CmdChangeRequest" type="T_BOOL" byteoffset="16" vartype="VAR_INPUT" access="ReadWrite" />
+      <UserDefElement iecname="StopReasonCntrlCmd" type="T_E_PackCmd" byteoffset="20" vartype="VAR_INPUT" access="ReadWrite" />
+      <UserDefElement iecname="Admin_CurDisabledStates" type="T_DWORD" byteoffset="24" vartype="VAR_INPUT" access="ReadWrite" />
+      <UserDefElement iecname="Active" type="T_BOOL" byteoffset="28" vartype="VAR_OUTPUT" access="ReadWrite" />
+      <UserDefElement iecname="Status_StateRequested" type="T_DINT" byteoffset="32" vartype="VAR_OUTPUT" access="ReadWrite" />
+      <UserDefElement iecname="Status_StateChangeInProcess" type="T_BOOL" byteoffset="36" vartype="VAR_OUTPUT" access="ReadWrite" />
+      <UserDefElement iecname="Status_StateCurrent" type="T_DINT" byteoffset="40" vartype="VAR_OUTPUT" access="ReadWrite" />
+      <UserDefElement iecname="timeOut" type="T_BOOL" byteoffset="44" vartype="VAR_OUTPUT" access="ReadWrite" />
+      <UserDefElement iecname="strState" type="T_STRING" byteoffset="45" vartype="VAR_OUTPUT" access="ReadWrite" />
+      <UserDefElement iecname="strDiagnostic" type="T_STRING" byteoffset="126" vartype="VAR_OUTPUT" access="ReadWrite" />
+      <UserDefElement iecname="masterState" type="T_E_PackState" byteoffset="208" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="cntrlCmd" type="T_E_PackCmd" byteoffset="212" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="localDisabledStates" type="T_U_StateBitDword" byteoffset="216" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="timeTimeOut_ms" type="T_INT" byteoffset="220" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="timeOutCheck" type="T_TON" byteoffset="224" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeUserDef name="T_HEVS_PackTag_Ingredients" size="3776" nativesize="3776" typeclass="Userdef" pouclass="STRUCTURE" iecname="HEVS_PackTag_Ingredients">
+      <UserDefElement iecname="Parameter_Real" type="T_ARRAY__1__8__OF_HEVS_PackTag_Parameter_Real" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Parameter_String" type="T_ARRAY__1__8__OF_HEVS_PackTag_Parameter_String" byteoffset="768" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Parameter_Lreal" type="T_ARRAY__1__8__OF_HEVS_PackTag_Parameter_Lreal" byteoffset="2176" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Parameter_Dint" type="T_ARRAY__1__8__OF_HEVS_PackTag_Parameter_Dint" byteoffset="3008" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeUserDef name="T_HEVS_PackTag_Process_Variables" size="3776" nativesize="3776" typeclass="Userdef" pouclass="STRUCTURE" iecname="HEVS_PackTag_Process_Variables">
+      <UserDefElement iecname="Parameter_Real" type="T_ARRAY__1__8__OF_HEVS_PackTag_Parameter_Real" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Parameter_String" type="T_ARRAY__1__8__OF_HEVS_PackTag_Parameter_String" byteoffset="768" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Parameter_Lreal" type="T_ARRAY__1__8__OF_HEVS_PackTag_Parameter_Lreal" byteoffset="2176" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Parameter_Dint" type="T_ARRAY__1__8__OF_HEVS_PackTag_Parameter_Dint" byteoffset="3008" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeUserDef name="T_HEVS_PackTag_CumulativeTimes" size="688" nativesize="688" typeclass="Userdef" pouclass="STRUCTURE" iecname="HEVS_PackTag_CumulativeTimes">
+      <UserDefElement iecname="AccTimeSinceReset" type="T_DINT" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="ModeStateTimes" type="T_ARRAY__0__8__OF_HEVS_PackTag_ModeStateTimes" byteoffset="4" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeUserDef name="T_HEVS_PackTag_Recipe" size="7648" nativesize="7648" typeclass="Userdef" pouclass="STRUCTURE" iecname="HEVS_PackTag_Recipe">
+      <UserDefElement iecname="ID" type="T_DINT" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Name" type="T_STRING" byteoffset="4" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Unit" type="T_STRING_6_" byteoffset="85" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="PrimaryQty" type="T_REAL" byteoffset="92" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="ProcessVariables" type="T_HEVS_PackTag_Process_Variables" byteoffset="96" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Ingredients" type="T_HEVS_PackTag_Ingredients" byteoffset="3872" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeArray name="T_ARRAY__0__3__OF_HEVS_PackTag_CumulativeTimes" size="2752" nativesize="2752" typeclass="Array" iecname="ARRAY [0..3] OF HEVS_PackTag_CumulativeTimes" basetype="T_HEVS_PackTag_CumulativeTimes">
+      <ArrayDim minrange="0" maxrange="3" />
+    </TypeArray>
+    <TypeArray name="T_ARRAY__1__8__OF_HEVS_PackTag_Recipe" size="61184" nativesize="61184" typeclass="Array" iecname="ARRAY [1..8] OF HEVS_PackTag_Recipe" basetype="T_HEVS_PackTag_Recipe">
+      <ArrayDim minrange="1" maxrange="8" />
+    </TypeArray>
+    <TypeUserDef name="T_HEVS_PackTag_Admin" size="14408" nativesize="14408" typeclass="Userdef" pouclass="STRUCTURE" iecname="HEVS_PackTag_Admin">
+      <UserDefElement iecname="Parameter_Real" type="T_ARRAY__0__8__OF_HEVS_PackTag_Parameter_Real" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Parameter_String" type="T_ARRAY__0__2__OF_HEVS_PackTag_Parameter_String" byteoffset="864" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Parameter_Lreal" type="T_ARRAY__0__8__OF_HEVS_PackTag_Parameter_Lreal" byteoffset="1392" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Parameter_Dint" type="T_ARRAY__0__8__OF_HEVS_PackTag_Parameter_Dint" byteoffset="2328" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Alarm" type="T_ARRAY__0__20__OF_HEVS_PackTag_Event" byteoffset="3192" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="AlarmExtent" type="T_DINT" byteoffset="5460" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="AlarmHistory" type="T_ARRAY__0__20__OF_HEVS_PackTag_Event" byteoffset="5464" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="AlarmHistoryExtent" type="T_DINT" byteoffset="7732" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="StopReason" type="T_HEVS_PackTag_Event" byteoffset="7736" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Warning" type="T_ARRAY__0__20__OF_HEVS_PackTag_Event" byteoffset="7844" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="WarningExtent" type="T_DINT" byteoffset="10112" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="ModeTimeCurrent" type="T_DINT" byteoffset="10116" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="StateTimeCurrent" type="T_DINT" byteoffset="10120" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="CumulativeTime" type="T_ARRAY__0__3__OF_HEVS_PackTag_CumulativeTimes" byteoffset="10124" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="ProductData" type="T_ARRAY__0__11__OF_HEVS_PackTag_ProductData" byteoffset="12876" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="MachDesignSpeed" type="T_REAL" byteoffset="14316" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="DisabledStatesCfg" type="T_ARRAY__0__8__OF_DWORD" byteoffset="14320" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="CurDisabledStates" type="T_DWORD" byteoffset="14356" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="EnabledModesCfg" type="T_DWORD" byteoffset="14360" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="ModeTransitionCfg" type="T_ARRAY__0__8__OF_DWORD" byteoffset="14364" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="PLCDateTime" type="T_DATE_AND_TIME" byteoffset="14400" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeUserDef name="T_HEVS_PackTag_Command" size="64416" nativesize="64416" typeclass="Userdef" pouclass="STRUCTURE" iecname="HEVS_PackTag_Command">
+      <UserDefElement iecname="UnitMode" type="T_DINT" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="UnitModeChangeRequest" type="T_BOOL" byteoffset="4" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="MachSpeed" type="T_REAL" byteoffset="8" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="MaterialIntelock" type="T_DWORD" byteoffset="12" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="CntrlCmd" type="T_DINT" byteoffset="16" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="CmdChangeRequest" type="T_BOOL" byteoffset="20" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Parameter_Real" type="T_ARRAY__1__2__OF_HEVS_PackTag_Parameter_Real" byteoffset="24" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Parameter_String" type="T_ARRAY__1__8__OF_HEVS_PackTag_Parameter_String" byteoffset="216" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Parameter_Lreal" type="T_ARRAY__1__8__OF_HEVS_PackTag_Parameter_Lreal" byteoffset="1624" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Parameter_Dint" type="T_ARRAY__1__8__OF_HEVS_PackTag_Parameter_Dint" byteoffset="2456" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="SelectedRecipe" type="T_DINT" byteoffset="3224" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="RecipeChangeRequest" type="T_BOOL" byteoffset="3228" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Recipe" type="T_ARRAY__1__8__OF_HEVS_PackTag_Recipe" byteoffset="3232" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeUserDef name="T_HEVS_PackTag_Status" size="63992" nativesize="63992" typeclass="Userdef" pouclass="STRUCTURE" iecname="HEVS_PackTag_Status">
+      <UserDefElement iecname="UnitModeCurrent" type="T_DINT" byteoffset="0" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="UnitModeRequested" type="T_DINT" byteoffset="4" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="UnitModeChangeInProcess" type="T_BOOL" byteoffset="8" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="StateCurrent" type="T_DINT" byteoffset="12" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="StateRequested" type="T_DINT" byteoffset="16" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="StateChangeInProcess" type="T_BOOL" byteoffset="20" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="MachSpeed" type="T_REAL" byteoffset="24" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="CurMachSpeed" type="T_REAL" byteoffset="28" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="MaterialInterlock" type="T_DWORD" byteoffset="32" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="EquipmentInterlock" type="T_HEVS_PackTag_Equipment_Interlock" byteoffset="36" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Parameter_Real" type="T_ARRAY__1__8__OF_HEVS_PackTag_Parameter_Real" byteoffset="40" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Parameter_String" type="T_ARRAY__1__2__OF_HEVS_PackTag_Parameter_String" byteoffset="808" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Parameter_Lreal" type="T_ARRAY__1__8__OF_HEVS_PackTag_Parameter_Lreal" byteoffset="1160" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Parameter_Dint" type="T_ARRAY__1__8__OF_HEVS_PackTag_Parameter_Dint" byteoffset="1992" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="RecipeCurrent" type="T_DINT" byteoffset="2760" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="RecipeRequested" type="T_DINT" byteoffset="2764" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="RecipeChangeInProcess" type="T_BOOL" byteoffset="2768" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Recipe" type="T_ARRAY__1__8__OF_HEVS_PackTag_Recipe" byteoffset="2776" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="Stacklight" type="T_ARRAY__1__8__OF_DWORD" byteoffset="63960" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+    <TypeSimple name="T_REFERENCE_TO_HEVS_PackTag_Admin_REF" size="14408" swapsize="0" typeclass="Reference" iecname="REFERENCE TO HEVS_PackTag_Admin_REF" basetype="T_HEVS_PackTag_Admin" />
+    <TypeUserDef name="T_FB_PackMasterMode" size="15394" nativesize="1008" typeclass="Userdef" pouclass="FUNCTION_BLOCK" iecname="FB_PackMasterMode">
+      <UserDefElement iecname="Enable" type="T_BOOL" byteoffset="8" vartype="VAR_INPUT" access="ReadWrite" />
+      <UserDefElement iecname="UMCC_UnitModeChangeComplete" type="T_BOOL" byteoffset="9" vartype="VAR_INPUT" access="ReadWrite" />
+      <UserDefElement iecname="StartupMode" type="T_DINT" byteoffset="12" vartype="VAR_INPUT" access="ReadWrite" />
+      <UserDefElement iecname="Cmd_UnitMode" type="T_DINT" byteoffset="16" vartype="VAR_INPUT" access="ReadWrite" />
+      <UserDefElement iecname="Cmd_UnitModeChangeRequest" type="T_BOOL" byteoffset="20" vartype="VAR_INPUT" access="ReadWrite" />
+      <UserDefElement iecname="Sts_StateCurrent" type="T_DINT" byteoffset="24" vartype="VAR_INPUT" access="ReadWrite" />
+      <UserDefElement iecname="Admin_ref" type="T_HEVS_PackTag_Admin" byteoffset="32" vartype="VAR_IN_OUT" access="ReadWrite" />
+      <UserDefElement iecname="Active" type="T_BOOL" byteoffset="14440" vartype="VAR_OUTPUT" access="ReadWrite" />
+      <UserDefElement iecname="Sts_UnitModeCurrent" type="T_DINT" byteoffset="14444" vartype="VAR_OUTPUT" access="ReadWrite" />
+      <UserDefElement iecname="Sts_UnitModeRequested" type="T_DINT" byteoffset="14448" vartype="VAR_OUTPUT" access="ReadWrite" />
+      <UserDefElement iecname="Sts_UnitModeChangeInProcess" type="T_BOOL" byteoffset="14452" vartype="VAR_OUTPUT" access="ReadWrite" />
+      <UserDefElement iecname="stringUnitModeCurrent" type="T_STRING" byteoffset="14453" vartype="VAR_OUTPUT" access="ReadWrite" />
+      <UserDefElement iecname="stringModeInfo" type="T_STRING" byteoffset="14534" vartype="VAR_OUTPUT" access="ReadWrite" />
+      <UserDefElement iecname="uliLoop" type="T_ULINT" byteoffset="14616" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="currentMode" type="T_DINT" byteoffset="14624" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="bInitDone" type="T_BOOL" byteoffset="14628" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="rTrigChangeRequest" type="T_R_TRIG" byteoffset="14629" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="internalChangeInProgress" type="T_BOOL" byteoffset="14645" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="stringModeCurrent" type="T_ARRAY__0__8__OF_STRING" byteoffset="14646" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="uliTriggerChangeRequested" type="T_ULINT" byteoffset="15376" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="bValidModeFound" type="T_BOOL" byteoffset="15384" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="setTestDWord" type="T_DWORD" byteoffset="15388" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="internalCurrentModeEnblTra" type="T_BOOL" byteoffset="15392" vartype="VAR" access="ReadWrite" />
+      <UserDefElement iecname="internalTargetModeEnblTra" type="T_BOOL" byteoffset="15393" vartype="VAR" access="ReadWrite" />
+    </TypeUserDef>
+  </TypeList>
+  <NodeList>
+    <Node name="Application">
+      <Node name="PackTag">
+        <Comment>	www.hevs.ch
+	Institut Systemes Industriels
+	Project: 	HEVS Pack 2022
+	Author:		Cedric Lenoir
+	Date:		2024 August 29
+	
+	Base GVL for HEVS Pack Tag
+ File name should be PackTag
+</Comment>
+        <Node name="Admin" type="T_HEVS_PackTag_Admin" access="ReadWrite" />
+        <Node name="Command" type="T_HEVS_PackTag_Command" access="ReadWrite" />
+        <Node name="hevsPackAlarm_UI" type="T_HEVS_PackAlarm_UI" access="ReadWrite">
+          <Comment> Help for interface and diagnostic
+ HEVS Pack could be used without this Struct.
+
+ Can be used with program PRG_TestAlarm</Comment>
+        </Node>
+        <Node name="hevsPackTime" type="T_HEVS_Time" access="ReadWrite">
+          <Comment> HEVS Time, needed for Alarms and Time in Pack
+ Computed with PRG_GetTime_CtrlX
+          or   PRG_GetTime_TwinCAT
+			or   Your own system</Comment>
+        </Node>
+        <Node name="hevsUI" type="T_HEVS_PackTag_UI" access="ReadWrite">
+          <Comment> Help for interface and diagnostic
+ HEVS Pack could be used without this Struct.
+
+ Can be used with fbCmdBoolInterface
+ Can be used with fbGetActualBoolState</Comment>
+        </Node>
+        <Node name="Status" type="T_HEVS_PackTag_Status" access="ReadWrite" />
+      </Node>
+      <Node name="PLC_PACK">
+        <Node name="Admin_CurDisabledStates" type="T_DWORD" access="ReadWrite" />
+        <Node name="defaultSettingsDone" type="T_BOOL" access="ReadWrite">
+          <Comment> Default settings for Disabled States, set in ACT_SetDefaultSettings</Comment>
+        </Node>
+        <Node name="fbCmdBoolInterface" type="T_FB_PackStateCmdBoolInterface" access="ReadWrite" />
+        <Node name="fbGetActualBoolState" type="T_FB_GetActualBoolState" access="ReadWrite" />
+        <Node name="fbModeBoolInterface" type="T_FB_PackModeBoolInterface" access="ReadWrite" />
+        <Node name="fbModuleTest" type="T_FB_ModuleTest" access="ReadWrite" />
+        <Node name="fbPackMaster" type="T_FB_PackMasterState" access="ReadWrite" />
+        <Node name="fbPackMasterMode" type="T_FB_PackMasterMode" access="ReadWrite" />
+        <Node name="testOtherSC" type="T_BOOL" access="ReadWrite">
+          <Comment> By setting this flag to FALSE, SC State Complete is disabled</Comment>
+        </Node>
+        <Node name="testUMCC" type="T_BOOL" access="ReadWrite">
+          <Comment> By setting this flag to FALSE, Unit Mode Change Complete is disabled</Comment>
+        </Node>
+        <Node name="uDisabledStatesMaintenance" type="T_U_StateBitDword" access="ReadWrite" />
+        <Node name="uDisabledStatesManual" type="T_U_StateBitDword" access="ReadWrite" />
+        <Node name="uDisabledStatesProduction" type="T_U_StateBitDword" access="ReadWrite">
+          <Comment>	Invalid := 0, Production := 1, Maintenance := 2, Manual := 3, Test := 4</Comment>
+        </Node>
+        <Node name="uDisabledStatesTest" type="T_U_StateBitDword" access="ReadWrite" />
+        <Node name="uliCount" type="T_ULINT" access="ReadWrite" />
+        <Node name="uListOfModesConfig" type="T_U_ModeBitDword" access="ReadWrite">
+          <Comment> Definition of available modes, to be defined in ACT_DefaultSettings.
+ Check below to define Disable State and Transitions for each mode</Comment>
+        </Node>
+        <Node name="uTransitionsMaintenance" type="T_U_StateBitDword" access="ReadWrite" />
+        <Node name="uTransitionsManual" type="T_U_StateBitDword" access="ReadWrite" />
+        <Node name="uTransitionsProduction" type="T_U_StateBitDword" access="ReadWrite">
+          <Comment> Default settings for State Trsnsitions, set in ACT_SetDefaultSettings
+	Invalid := 0, Production := 1, Maintenance := 2, Manual := 3, Test := 4</Comment>
+        </Node>
+        <Node name="uTransitionsTest" type="T_U_StateBitDword" access="ReadWrite" />
+        <Node name="whatSC" type="T_BOOL" access="ReadWrite" />
+      </Node>
+    </Node>
+  </NodeList>
+</Symbolconfiguration>

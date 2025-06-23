@@ -1,0 +1,17 @@
+@startuml
+Requestor -> ExecutionSystem : SEND - PackTag.Command.UnitMode
+note left : Input Mode Target
+note right : Local processing
+
+Requestor -> ExecutionSystem : SEND - PackTag.Command.UnitModeChangeRequest
+note left : Request Mode Change
+note right : Mode request verified, else rejected
+
+Requestor <- ExecutionSystem : ACKNOWLEDGE - PackTag.Status.UnitModeRequested
+note right : Mode Change Processing
+
+Requestor <- ExecutionSystem : ACKNOWLEDGE - PackTag.Status.UnitModeChangeInProcess
+note right : Mode Request Complete
+
+Requestor <- ExecutionSystem : ACKNOWLEDGE - PackTag.Status.UnitModeCurrent
+@enduml

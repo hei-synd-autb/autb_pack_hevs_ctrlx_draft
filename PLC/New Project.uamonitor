@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+   <configurationVersion>1.1</configurationVersion>
+   <connections>
+      <connection>
+         <connectionAddress>opc.tcp://192.168.1.1:4840</connectionAddress>
+         <applicationURI>urn:Control@Rexroth:ctrlX:AUTOMATION:Server</applicationURI>
+         <serverName>ctrlX OPC UA Server</serverName>
+         <messageMode>SignAndEncrypt</messageMode>
+         <securityPolicy>Basic256Sha256</securityPolicy>
+         <userAuthentication>UsernameAndPassword</userAuthentication>
+         <username>boschrexroth</username>
+         <password>4InwIw5jhtrk0Va8y2Wf7iUG+RxHDNQw</password>
+      </connection>
+   </connections>
+   <groups>
+      <signalGroup>
+         <name>Default Group</name>
+         <intervalMs>1000</intervalMs>
+         <handleMissingNodes>false</handleMissingNodes>
+      </signalGroup>
+   </groups>
+   <views>
+      <view>
+         <index>0</index>
+         <title>Default Panel</title>
+         <checkTimestamps>false</checkTimestamps>
+         <font>DEFAULT</font>
+         <style>ROUNDED_CORNERS</style>
+         <location>
+            <screenPositionX>0</screenPositionX>
+            <screenPositionY>0</screenPositionY>
+            <screenWidth>600</screenWidth>
+            <screenHeight>800</screenHeight>
+         </location>
+         <grid>
+            <rows>3</rows>
+            <cols>4</cols>
+            <cellSize>200</cellSize>
+         </grid>
+      </view>
+   </views>
+   <applicationSettings>
+      <signalLoggingEnabled>false</signalLoggingEnabled>
+      <notificationLoggingEnabled>false</notificationLoggingEnabled>
+      <loggingSettings>
+         <csvSeparator>;</csvSeparator>
+         <decimalMarker>,</decimalMarker>
+         <filePath>C:\Users\cedric.lenoir\Desktop</filePath>
+         <maxLines>10000</maxLines>
+         <maxFiles>10</maxFiles>
+         <logAllItems>true</logAllItems>
+         <useLocalTimeZone>true</useLocalTimeZone>
+         <includeTimeZone>false</includeTimeZone>
+         <timeFormat>yyyy-MM-dd'T'HH:mm:ss.SSS</timeFormat>
+         <singleFileMode>true</singleFileMode>
+      </loggingSettings>
+      <timeBasedLoggingSettings>
+         <timeBasedLoggingEnabled>false</timeBasedLoggingEnabled>
+         <timeBasedLoggingInterval>1</timeBasedLoggingInterval>
+      </timeBasedLoggingSettings>
+   </applicationSettings>
+</configuration>

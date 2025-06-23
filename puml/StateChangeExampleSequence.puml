@@ -1,0 +1,15 @@
+@startuml
+Requestor -> ExecutionSystem : SEND - PackTag.Command.CntrlCmd
+note right : Local processing
+
+Requestor -> ExecutionSystem : SEND - PackTag.Command.CmdChangeRequest
+note right : State request verified, else rejected
+
+Requestor <- ExecutionSystem : ACKNOWLEDGE - PackTag.Status.StateRequested
+note right : State Change Processing
+
+Requestor <- ExecutionSystem : ACKNOWLEDGE - PackTag.Status.StateChangeInProcess
+note right : State Request Complete
+
+Requestor <- ExecutionSystem : ACKNOWLEDGE - PackTag.Status.StateCurrent
+@enduml
