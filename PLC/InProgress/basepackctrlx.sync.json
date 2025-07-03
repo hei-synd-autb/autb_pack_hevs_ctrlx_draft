@@ -7,9 +7,9 @@
   "Solution": "DefaultSolution",
   "ControllerGuid": "c8b7c6a6-66b3-429e-9f40-b2a3021c8fcb",
   "LastChange": 638609683175603741,
-  "MachineName": "VS-W11474",
-  "UserName": "cedric.lenoir",
-  "ProjectCompleteFilename": "C:\\Users\\cedric.lenoir\\Documents\\GitLab\\hevs_ctrlx_pack\\PLC\\InProgress\\BasePackCtrlX.project",
+  "MachineName": "VS-W08453",
+  "UserName": "aurore.mauris",
+  "ProjectCompleteFilename": "C:\\Users\\aurore.mauris\\Documents\\github hevs\\autb_pack_hevs_ctrlx_draft\\PLC\\InProgress\\BasePackCtrlX.project",
   "CompilerVersion": {
     "Major": 3,
     "Minor": 5,
@@ -55,6 +55,11 @@
       "MachineName": "WE7845",
       "UserName": "cedric.lenoir",
       "ProjectCompleteFilename": "C:\\Users\\cedric.lenoir\\Documents\\AutB\\BasePackCtrlX.project"
+    },
+    "VS-W08453:aurore.mauris": {
+      "MachineName": "VS-W08453",
+      "UserName": "aurore.mauris",
+      "ProjectCompleteFilename": "C:\\Users\\aurore.mauris\\Documents\\github hevs\\autb_pack_hevs_ctrlx_draft\\PLC\\InProgress\\BasePackCtrlX.project"
     }
   },
   "CompileinfoChecksum": {
