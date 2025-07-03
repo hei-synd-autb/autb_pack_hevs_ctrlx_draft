@@ -1,0 +1,67 @@
+{
+  "Name": "Device",
+  "IconName": null,
+  "EcadId": "",
+  "TypeName": "_3S.CoDeSys.DeviceObject.DeviceObject",
+  "Type": 4096,
+  "Id": "1001 0090",
+  "ModuleId": null,
+  "Version": "1.20.0.0",
+  "ObjectGuid": "f5fa51b0-ac2c-4ba9-8bed-85cc46ef61fe",
+  "SlotIndex": 0,
+  "StructuralItems": [
+    {
+      "Name": "ethercatmaster",
+      "IconName": null,
+      "EcadId": null,
+      "TypeName": "_3S.CoDeSys.DeviceObject.DeviceObject",
+      "Type": 64,
+      "Id": "1001 0101",
+      "ModuleId": null,
+      "Version": "1.20.0.0",
+      "ObjectGuid": "9160f571-a6a7-4e2c-ba99-c8488c701ee3",
+      "SlotIndex": 0,
+      "StructuralItems": [
+        {
+          "Name": "ctrlX_DRIVE_XCS_X",
+          "IconName": null,
+          "EcadId": null,
+          "TypeName": "_3S.CoDeSys.DeviceObject.DeviceObject",
+          "Type": 65,
+          "Id": "24_2000431100000003",
+          "ModuleId": null,
+          "Version": "Revision=16#00000003",
+          "ObjectGuid": "8ef39d36-c074-406e-8e05-cf37a99d91b4",
+          "SlotIndex": 0,
+          "StructuralItems": []
+        },
+        {
+          "Name": "ctrlX_DRIVE_XMD_Y",
+          "IconName": null,
+          "EcadId": null,
+          "TypeName": "_3S.CoDeSys.DeviceObject.DeviceObject",
+          "Type": 65,
+          "Id": "24_2000412100000003",
+          "ModuleId": null,
+          "Version": "Revision=16#00000003",
+          "ObjectGuid": "985b525d-0137-4cc2-9672-4890750e3e39",
+          "SlotIndex": 0,
+          "StructuralItems": []
+        },
+        {
+          "Name": "ctrlX_DRIVE_XMD_Z",
+          "IconName": null,
+          "EcadId": null,
+          "TypeName": "_3S.CoDeSys.DeviceObject.DeviceObject",
+          "Type": 65,
+          "Id": "24_2000412200000003",
+          "ModuleId": null,
+          "Version": "Revision=16#00000003",
+          "ObjectGuid": "7174c9b3-bed3-4e77-8d12-3f52e85e0f0f",
+          "SlotIndex": 0,
+          "StructuralItems": []
+        }
+      ]
+    }
+  ]
+}

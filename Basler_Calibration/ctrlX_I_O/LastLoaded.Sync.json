@@ -1,0 +1,50 @@
+{
+  "IsSynced": false,
+  "SyncMode": 0,
+  "InSyncWithRuntime": false,
+  "ApplicationType": "io",
+  "Configuration": "appdata",
+  "Solution": "DefaultSolution",
+  "ControllerGuid": "f5fa51b0-ac2c-4ba9-8bed-85cc46ef61fe",
+  "LastChange": 638642454708987434,
+  "MachineName": "VS-W08453",
+  "UserName": "cedric.lenoir",
+  "ProjectCompleteFilename": "C:\\Users\\cedric.lenoir\\Documents\\AutB\\hevs_ctrlx_pack_abox\\ctrlX_I_O\\ABox_IO_Axes.project",
+  "CompilerVersion": {
+    "Major": 3,
+    "Minor": 5,
+    "Build": 19,
+    "Revision": 60,
+    "MajorRevision": 0,
+    "MinorRevision": 60
+  },
+  "OwnVersion": {
+    "Major": 1,
+    "Minor": 2,
+    "Build": 0,
+    "Revision": 0,
+    "MajorRevision": 0,
+    "MinorRevision": 0
+  },
+  "ProductAdditionalFolder": "Default",
+  "ProductProfileName": "ctrlX IO 1.20.7",
+  "ProductId": "ctrlx-works",
+  "ProductVersion": "1.20.11",
+  "ProductVersionText": "WRK-V-0120.11",
+  "SyncModeSave": false,
+  "SyncModeDownload": false,
+  "SyncModeAsk": false,
+  "SyncAfterBootApplication": false,
+  "UserMetaData": {
+    "VS-W08453:cedric.lenoir": {
+      "MachineName": "VS-W08453",
+      "UserName": "cedric.lenoir",
+      "ProjectCompleteFilename": "C:\\Users\\cedric.lenoir\\Documents\\AutB\\hevs_ctrlx_pack_abox\\ctrlX_I_O\\ABox_IO_Axes.project"
+    }
+  },
+  "CompileinfoChecksum": {},
+  "SyncDescription": false,
+  "DeviceId": "1001 0090",
+  "DeviceVersion": "1.20.0.0",
+  "UseIoHierachy": true
+}
