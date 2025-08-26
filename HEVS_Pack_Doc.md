@@ -520,26 +520,29 @@ Pour avoir accès au Node-RED, et donc au tableau de bord il y a quelques étape
 - En arrivant sur *Alarms*, il y aura 3 tableaux, 1 pour les alarmes actives, 1 pour l'historique des alarmes et le dernier pour les warnings actifs ;
   
 **Information** : Au moment où ce document est rédigé, les boutons Open et Close Gripper dans le dashboard ne fonctionne plus. Dû a des suppressions de code dans les 3 FBs (OpenGripper, CloseGripper, GripperState).
+
 ## 7. Choses à savoir
+
 ### 7.1. Vocabulaire
-__ENUM__ (énumération) : énumérer toutes les étapes de la machine d'état et définir une valeur symbolique.
+
+**ENUM** (énumération) : énumérer toutes les étapes de la machine d'état et définir une valeur symbolique.
 *EXEMPLE PHOTO*
 
-__PRG__ (Program) : Only one instance possible
+**PRG** (Program) : Only one instance possible
 
-__FB__ (Functionblock) : Multiple instances possible
+**FB** (Functionblock) : Multiple instances possible
 
 **ENUM** (Énumération) : Un `ENUM` est un type de donnée qui permet de définir une liste de valeurs symboliques fixes, souvent utilisées pour représenter des états ou options. Il rend le code plus lisible en remplaçant des valeurs numériques par des noms explicites. Cela sera pas exemple les différents états de la machine d'état dans le CASE ... OF
 
 **STRUCT** (Structure) : Une `STRUCT` regroupe plusieurs variables de types potentiellement différents sous un même nom, permettant de manipuler un ensemble cohérent de données comme une seule entité.
 
-__SC__ (State Complete) : Etat fini, prêt à passer a l’état suivant [BOOL]
+**SC** (State Complete) : Etat fini, prêt à passer a l’état suivant [BOOL]
 
-__HMI__ (Human-Machine Interface) : système ou dispositif qui permet à un être humain d’interagir avec une machine, un système automatisé ou un processus industriel. Dans notre cas, ceci est un écran tactile sur une machine industrielle (ex. Siemens, ...).
+**HMI** (Human-Machine Interface) : système ou dispositif qui permet à un être humain d’interagir avec une machine, un système automatisé ou un processus industriel. Dans notre cas, ceci est un écran tactile sur une machine industrielle (ex. Siemens, ...).
 
-__Warning__ (Avertissement) : la gravité est faible à moyenne, approche d'une limite par exemple. Le but est d'informer l'utilisateur. Aucune action immédiate est requise, mais une vérification ou une maintenance est recommandée.
+**Warning** (Avertissement) : la gravité est faible à moyenne, approche d'une limite par exemple. Le but est d'informer l'utilisateur. Aucune action immédiate est requise, mais une vérification ou une maintenance est recommandée.
 
-__Alarm__ (Alarme) : la gravité est élevée, en situation critique ou anormale. Le but est de signaler un danger, une défaillance ou un risque pour la sécurité, la machine ou le produit.Une intervention immédiate est requise.
+**Alarm** (Alarme) : la gravité est élevée, en situation critique ou anormale. Le but est de signaler un danger, une défaillance ou un risque pour la sécurité, la machine ou le produit.Une intervention immédiate est requise.
 
 ### 7.2. Astuces
 1. Savoir si votre variable,(même FB ou PRG) est déclaré, appelé, lu, écrit (et à quel endroit)
@@ -556,11 +559,12 @@ Faites un clic droit sur votre variable -> Browse -> Display Cross References
 4. Si les actions ne fonctionnent pas ou bloque à une certaine étape, mettre un compteur peut permettre de debugger.
     Si on prend l'exemple du CASE ... OF on peut en mettre un avant le début de la machine d'état pour voir si le FB est appelé. Un a l'intérieur du CASE ... OF pour savoir si on sort de la machine d'état.
 
-		//Exemple dans le CM_ControlGripper:
-		uliLoopClearing := uliLoopClearing + 1;
+```
+	//Exemple dans le CM_ControlGripper:
+	uliLoopClearing := uliLoopClearing + 1;
 
-		//diLoop sert aussi à faire ça dans certains PRG et FB du pack ML.
-
+	//diLoop sert aussi à faire ça dans certains PRG et FB du pack ML.
+```
 5. Si le FB est grisé dans la fenetre devices c'est que le FB n'est pas appelé dans un PRG. Vu que nous sommes en ST (structured Text). Il faut instancier et appeler un FB.
 - Ecrire les variables dont tu as besoin = Instancier
 - Les appeler dans ton code sinon tu ne les utilises pas. Elles ne changeront jamais de valeurs par exemple.
