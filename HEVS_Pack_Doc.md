@@ -52,12 +52,14 @@
 
 ## 1. Définition d'un pack ML
 PackML est l'acronyme anglais de Packaging Machine Language. Il s'agit d'une norme d'emballage utilisée dans le secteur du contrôle de machine, spécifiquement pour les machines d'emballage.
+
 ## 2. Objectif du pack ML HEVS
 Le but de ce pack ML est que tout étudiant ou personne, ayant des bases en automation, puissent avoir déjà un programme déjà bien fourni pour débuter un projet pour contrôler un ou plusieurs modules comme une pince ou des axes.
 Les avantages de commencer avec un pack ML :
   - Gain de temps (environ 15h)
   - Simplifier un début de projet
   - Départ avec une structure propre
+
 ## 3. Composition du pack ML HEVS
 Le pack ML est basé et construit selon la norme ISA88.
 Voici la structure général du PLC code
@@ -221,7 +223,7 @@ State manager
 | strState                | STRING       | Output    | 'FB not Active'              | State for UI diagnostic and info                                                            |
 | strDiagnostic           | STRING       | Output    | 'FB not active'              | Diagnostic string for UI                                                            |
 
-#### PLC_PACK (PRG)
+#### PLC_PACK PRG
 **ACT_SetDefaultSettings**
 Dans ce PRG, nous savons les modes qui sont activés. De plus, nous pouvons savoir si les modes ont les 17 états actifs où si certains sont désactivés. Nous savons également les transitions de mode possibles et dans quels états ceux-ci son faisables.
 
@@ -265,10 +267,10 @@ Voici les 2 structures les plus importantes à comprendre pour modifier le code.
 
 ```
 
-## 4.2. Control Module (CM)
+## 4.2. Control Module - CM
  Un Control Module est l’unité de base qui contrôle un équipement simple (comme une vanne, un moteur, un capteur). Il regroupe la logique de commande, les états et les diagnostics d’un seul élément physique.
 
-## 4.3. Equipment Module (EM)
+## 4.3. Equipment Module - EM
 Un Equipment Module est une entité plus complexe et fonctionnelle qui regroupe plusieurs CM pour réaliser une tâche spécifique de production. Il gère une séquence ou un comportement à un niveau supérieur.
 
 ## 4.4. Modes
@@ -290,7 +292,9 @@ Il y a 4 modes utilisés : Manuel, Production, Maintenance et Test.
 
 Si nous souhaitons que le FB soit utilisé uniquement dans un mode, nous pouvons l'écrire ainsi :
 
-    Dans cette exemple, le FB sera utilisé uniquement dans le mode Manuel :
+Dans cette exemple, le FB sera utilisé uniquement dans le mode Manuel :
+
+```iecst
 	//Variables
 		VAR
 			currentMode	: DINT := E_PackModes;
@@ -298,6 +302,7 @@ Si nous souhaitons que le FB soit utilisé uniquement dans un mode, nous pouvons
 
 	//Code - En début du ACT (ou FB) avant le CASE...OF
 		IF currentMode = E_PackModes.Manual THEN
+```
 
 
 
@@ -366,25 +371,27 @@ Les points suivants explique comment implémenter du code.
    
 Créer les dans le dossier DUTs de Student
 
-		// Exemple d'un ENUM 	
-		TYPE E_PackModes :
-			(
-			Invalid 	:= 0,
-			Production 	:= 1,
-			Maintenance 	:= 2,
-			Manual 		:= 3
-			) DINT;
-			END_TYPE
+```iecst
+	// Exemple d'un ENUM 	
+	TYPE E_PackModes :
+		(
+		Invalid 	:= 0,
+		Production 	:= 1,
+		Maintenance := 2,
+		Manual 		:= 3
+		) DINT;
+	END_TYPE
 
-		// Exemple d'un STRUCT 	
-		TYPE HEVS_Time :
-		STRUCT
-			Date_and_time_in_seconds	: UDINT;
-			Local_date_time_seconds 	: UDINT;
-			Date_and_time_format 		: DATE_AND_TIME;
-			Date_and_time_string 		: STRING;		
-		END_STRUCT
-		END_TYPE
+	// Exemple d'un STRUCT 	
+	TYPE HEVS_Time :
+	STRUCT
+		Date_and_time_in_seconds	: UDINT;
+		Local_date_time_seconds 	: UDINT;
+		Date_and_time_format 		: DATE_AND_TIME;
+		Date_and_time_string 		: STRING;		
+	END_STRUCT
+	END_TYPE
+```
 
 2. Création d'un FB :
 Créer les dans le dossier POUs de Student
@@ -393,24 +400,30 @@ Plusieurs nouveaux CASE...OF peuvent être écrit dans l'ACT corespondant. Par e
 
 Attention votre FB doit définir les sorties.
    
-   		// Exemple dans CM_ControlGripper pour ouvrir la pince :
-		fbOpenGripper.Execute := (gripperClearing = E_GripperClearing.eOpenGripper);
-		fbOpenGripper.Execute := (gripperResetting = E_GripperResetting.eOpenGripper);
-		fbOpenGripper(hwEV := hwEV, 
-              	       hwSensor := hwSensor);
+```iecst
+   	// Exemple dans CM_ControlGripper pour ouvrir la pince :
+	fbOpenGripper.Execute := (gripperClearing = E_GripperClearing.eOpenGripper);
+	fbOpenGripper.Execute := (gripperResetting = E_GripperResetting.eOpenGripper);
+	fbOpenGripper(hwEV := hwEV, 
+              	  hwSensor := hwSensor);
+```
 
 Votre FB doit être appelé quelque part. Dans le cas de CM_ControlGripper, il est appelé dans PRG_Student.
 Dans les VAR du PRG, il est déclaré :
 		
-		VAR
-			cmControlGripper	: CM_ControlGripper;
-		END_VAR
+```iecst
+	VAR
+		cmControlGripper	: CM_ControlGripper;
+	END_VAR
+```
 Ensuite il est instancié dans le PRG :
 
-	cmControlGripper	(Status_ModeCurrent:= PackTag.Status.UnitModeCurrent ,
-				Status_StateCurrent:= PackTag.Status.StateCurrent,
-				hwEV := GVL_Abox.uaAboxInterface.uaSchunkGripper, 
-				hwSensor := GVL_Abox.uaAboxInterface.uaSchunk);
+```iecst
+	cmControlGripper(Status_ModeCurrent:= PackTag.Status.UnitModeCurrent ,
+				     Status_StateCurrent:= PackTag.Status.StateCurrent,
+				     hwEV := GVL_Abox.uaAboxInterface.uaSchunkGripper, 
+				     hwSensor := GVL_Abox.uaAboxInterface.uaSchunk);
+```
 
 Il faut, pour finir, rajouter le SC de votre FB dans HEVS_UnitBox -> HEVS_Process -> PRG_EM_Process ->ACT_Build_Pack_SC. Vous pouvez prendre l'exemple sur CM_ControlGripper.
 
@@ -422,48 +435,51 @@ Une copie du PRG_Student peut être fait pour avoir une base.
 Le but est d'avoir un warning personnalisé avec notre CASE .. OF pour informer, par exemple si la machine d'état reste bloqué dans une position.
 
 
-      tonHevsReseeting(IN := (actualState = E_PackState.eResetting),
-	             PT := T#4S);    // Délai de 4 secondes après le début de l'état resetting
+```iecst
+    tonHevsReseeting(IN := (actualState = E_PackState.eResetting),
+	                 PT := T#4S);    // Délai de 4 secondes après le début de l'état resetting
 		
-		fbSetWarning_3(xSetWarning := PackTag.hevsPackAlarm_UI.uiSetWarning_3,
-	           xAckWarningTrig := FC_HEVS_GetAckWarningById(3),
-			   // Warning Parameters
-			   ID := 3,
-	           Value := 33,
-	           Message := 'Warning 3, Finished',
-	           Category := E_EventCategory.Warning,
-			   // Reference to plc time from PackTag
-			   plcDateTimePack	:= PackTag.Admin.PLCDateTime,
-			   // Link to PackTag Admin
-	           stAdminWarning := PackTag.Admin.Warning);
+	fbSetWarning_3(xSetWarning := PackTag.hevsPackAlarm_UI.uiSetWarning_3,
+	               xAckWarningTrig := FC_HEVS_GetAckWarningById(3),
+			       // Warning Parameters
+			       ID := 3,
+	               Value := 33,
+	               Message := 'Warning 3, Finished',
+	               Category := E_EventCategory.Warning,
+			       // Reference to plc time from PackTag
+			       plcDateTimePack	:= PackTag.Admin.PLCDateTime,
+			       // Link to PackTag Admin
+	               stAdminWarning := PackTag.Admin.Warning);
 
-      fbHEVS_SetWarningResetting(xSetWarning := tonHevsReseeting.Q,
-	           
-				    xAckWarningTrig := FC_HEVS_GetAckWarningById(5),
-			        // Warning Parameters
-				    ID := 5,
-				    Value := 4,
-				    Message := 'Warning , Resetting', // Information pour l'utilisateur 
-				    Category := E_EventCategory.Warning,
-				    // Reference to plc time from PackTag
-				    plcDateTimePack	:= PackTag.Admin.PLCDateTime,
-				    // Link to PackTag Admin
-				    stAdminWarning := PackTag.Admin.Warning);
+    fbHEVS_SetWarningResetting(xSetWarning := tonHevsReseeting.Q,
+	           				   xAckWarningTrig := FC_HEVS_GetAckWarningById(5),
+			                   // Warning Parameters
+				               ID := 5,
+				               Value := 4,
+				               Message := 'Warning , Resetting', // Information pour l'utilisateur 
+				               Category := E_EventCategory.Warning,
+				               // Reference to plc time from PackTag
+				               plcDateTimePack	:= PackTag.Admin.PLCDateTime,
+				               // Link to PackTag Admin
+				               stAdminWarning := PackTag.Admin.Warning);
+```
 
 ### 5.4. Création d'une alarme
 Le but est d'avoir une alarme personnalisée avec notre CASE .. OF pour alerter par exemple si la machine d'état reste bloqué dans une position.
 
+```iecst
 	fbSetAlarm_*4*(xSetAlarm := PackTag.hevsPackAlarm_UI.uiSetAlarm_*4*,
-	         xAckAlarmTrig := PackTag.hevsPackAlarm_UI.uiAckAlarm_*4* OR FC_HEVS_GetAckAlarmById(5),
-			ID := 5,
-	        Value := 121,
-	        Message := 'Suspend 1, Input blocked',
-	        Category := E_EventCategory.Suspend,
-			// Reference to plc time from PackTag
-			plcDateTimePack	:= PackTag.Admin.PLCDateTime,
-			// Link to PackTag Admin
-	        stAdminAlarm := PackTag.Admin.Alarm,
-			stAdminAlarmHistory := PackTag.Admin.AlarmHistory);
+	               xAckAlarmTrig := PackTag.hevsPackAlarm_UI.uiAckAlarm_*4* OR FC_HEVS_GetAckAlarmById(5),
+			       ID := 5,
+	               Value := 121,
+	               Message := 'Suspend 1, Input blocked',
+	               Category := E_EventCategory.Suspend,
+			       // Reference to plc time from PackTag
+			       plcDateTimePack	:= PackTag.Admin.PLCDateTime,
+			       // Link to PackTag Admin
+	               stAdminAlarm := PackTag.Admin.Alarm,
+			       stAdminAlarmHistory := PackTag.Admin.AlarmHistory);
+```
 
 *Il faudra changer les indications entre astérisque*
 
@@ -478,6 +494,7 @@ Il faut ajouter le nouveau mode dans les VAR du PLC_PACK.
 *Chemin : HEVS_Pack_2022 -> HEVS_POU_Pack -> PLC_PACK -> ACT_SetDefaultSettings*
 Il faut indiquer que le mode est disponible *TRUE*.
 
+```iecst
 	uListOfModesConfig.boolMode.Invalid := FALSE;
 	uListOfModesConfig.boolMode.Maintenance := TRUE;
 	uListOfModesConfig.boolMode.Manual := TRUE;
@@ -487,6 +504,7 @@ Il faut indiquer que le mode est disponible *TRUE*.
 	uListOfModesConfig.boolMode.UserDefinable_6 := FALSE;
 	uListOfModesConfig.boolMode.UserDefinable_7 := FALSE;
 	uListOfModesConfig.boolMode.UserDefinable_8 := FALSE;
+```
 
 
 Il faut indiquer quels états sont actifs *FALSE* et les états inactifs *TRUE*. 
@@ -559,7 +577,7 @@ Faites un clic droit sur votre variable -> Browse -> Display Cross References
 4. Si les actions ne fonctionnent pas ou bloque à une certaine étape, mettre un compteur peut permettre de debugger.
     Si on prend l'exemple du CASE ... OF on peut en mettre un avant le début de la machine d'état pour voir si le FB est appelé. Un a l'intérieur du CASE ... OF pour savoir si on sort de la machine d'état.
 
-```
+```iecst
 	//Exemple dans le CM_ControlGripper:
 	uliLoopClearing := uliLoopClearing + 1;
 
